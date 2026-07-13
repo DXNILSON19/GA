@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Código de estudiante">
+  <meta name="description" content="Prototipo web simple de EcoMove para registro y consulta de estaciones.">
+  <title>EcoMove</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- PANTALLA 1: ACCESO -->
+  <section id="inicio" class="screen">
+    <div class="phone">
+      <h1>EcoMove</h1>
+
+      <div class="button-list">
+        <a class="button" href="#exito">Registrarme con Google <span aria-hidden="true">G</span></a>
+        <a class="button" href="#registro">Registrarme con correo <span aria-hidden="true">✉</span></a>
+        <a class="button" href="#exito">Registrarme con Apple <span aria-hidden="true"></span></a>
+      </div>
+
+      <h2>¿Ya tienes una cuenta?</h2>
+      <a class="button" href="#home">Iniciar sesión</a>
+
+      <nav class="small-nav" aria-label="Navegación secundaria">
+        <a href="#contacto">Contacto</a>
+        <a href="#home">Servicio</a>
+        <a href="#estaciones">Impacto</a>
+      </nav>
+
+      <div class="main-icon" aria-hidden="true">🚲</div>
+    </div>
+  </section>
+
+  <!-- PANTALLA 2: REGISTRO -->
+  <section id="registro" class="screen">
+    <div class="phone">
+      <h1>EcoMove</h1>
+      <div class="mail-icon" aria-hidden="true">✉</div>
+
+      <form class="form">
+        <label for="name">Nombre y apellido</label>
+        <input id="name" type="text" placeholder="Ingresa tu nombre completo">
+
+        <label for="email">Correo electrónico</label>
+        <input id="email" type="email" placeholder="nombre@correo.com">
+
+        <label for="password">Contraseña</label>
+        <input id="password" type="password" placeholder="Mínimo 8 caracteres">
+
+        <label for="confirm-password">Confirmar contraseña</label>
+        <input id="confirm-password" type="password" placeholder="Repite tu contraseña">
+      </form>
+
+      <div class="two-buttons">
+        <a class="button" href="#exito">Crear cuenta</a>
+        <a class="button secondary" href="#error">Simular correo inválido</a>
+      </div>
+
+      <div class="main-icon" aria-hidden="true">🚲</div>
+    </div>
+  </section>
+
+  <!-- PANTALLA 3: ERROR -->
+  <section id="error" class="screen">
+    <div class="phone">
+      <h1>EcoMove</h1>
+      <div class="mail-icon" aria-hidden="true">✉</div>
+
+      <form class="form">
+        <label for="error-name">Nombre y apellido</label>
+        <input id="error-name" type="text" value="Denilson Vásquez">
+
+        <label for="error-email">Correo electrónico</label>
+        <input id="error-email" class="invalid-input" type="text" value="denilson@gmail">
+        <p class="error-message">Ingresa un correo electrónico válido.</p>
+
+        <label for="error-password">Contraseña</label>
+        <input id="error-password" type="password" value="12345678">
+
+        <label for="error-confirm">Confirmar contraseña</label>
+        <input id="error-confirm" type="password" value="12345678">
+      </form>
+
+      <a class="button" href="#registro">Corregir datos</a>
+      <div class="main-icon" aria-hidden="true">🚲</div>
+    </div>
+  </section>
+
+  <!-- PANTALLA 4: ÉXITO -->
+  <section id="exito" class="screen">
+    <div class="phone">
+      <h1>EcoMove</h1>
+      <div class="mail-icon" aria-hidden="true">✉</div>
+
+      <p class="success-message">Cuenta creada con éxito</p>
+      <div class="success-icon" aria-hidden="true">✓</div>
+
+      <a class="button" href="#home">Volver al inicio</a>
+      <div class="main-icon" aria-hidden="true">🚲</div>
+    </div>
+  </section>
+
+  <!-- PANTALLA 5: HOME -->
+  <section id="home" class="screen">
+    <div class="phone">
+      <h1>EcoMove</h1>
+
+      <div class="cards">
+        <a class="card" href="#estaciones">
+          <span aria-hidden="true">🗺</span>
+          <p>Mapa de estaciones</p>
+        </a>
+
+        <a class="card" href="#estaciones">
+          <span aria-hidden="true">🚲</span>
+          <p>Modelos de bicicletas</p>
+        </a>
+
+        <a class="card" href="#estaciones">
+          <span aria-hidden="true">🛴</span>
+          <p>Modelos de scooters</p>
+        </a>
+      </div>
+
+      <div class="main-icon" aria-hidden="true">🚲</div>
+    </div>
+  </section>
+
+  <!-- PANTALLA 6: ESTACIÓN DISPONIBLE -->
+  <section id="estaciones" class="screen">
+    <div class="phone">
+      <h1>EcoMove</h1>
+      <h2>Mapa de estaciones</h2>
+
+      <div class="map" role="img" aria-label="Mapa referencial con una estación marcada">
+        <span aria-hidden="true">📍</span>
+      </div>
+
+      <div class="availability">
+        <p><span aria-hidden="true">📍</span> <strong>Estación Grau</strong></p>
+        <p><span aria-hidden="true">🚲</span> 4 bicicletas disponibles</p>
+        <p><span aria-hidden="true">🛴</span> 5 scooters disponibles</p>
+      </div>
+
+      <a class="button" href="#sin-disponibilidad">Ver estación sin disponibilidad</a>
+      <a class="text-link" href="#home">Volver al inicio</a>
+    </div>
+  </section>
+
+  <!-- PANTALLA 7: SIN DISPONIBILIDAD -->
+  <section id="sin-disponibilidad" class="screen">
+    <div class="phone">
+      <h1>EcoMove</h1>
+      <h2>Mapa de estaciones</h2>
+
+      <div class="map" role="img" aria-label="Mapa referencial con la estación San Borja marcada">
+        <span aria-hidden="true">📍</span>
+      </div>
+
+      <div class="availability">
+        <p><span aria-hidden="true">📍</span> <strong>Estación San Borja</strong></p>
+        <p><span aria-hidden="true">🚲</span> No hay bicicletas disponibles</p>
+        <p><span aria-hidden="true">🛴</span> No hay scooters disponibles</p>
+      </div>
+
+      <p class="notice">Selecciona otra estación para continuar.</p>
+      <a class="button" href="#estaciones">Volver al mapa</a>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <p>EcoMove · contacto@ecomove.pe</p>
+  </footer>
+
+</body>
+</html>
